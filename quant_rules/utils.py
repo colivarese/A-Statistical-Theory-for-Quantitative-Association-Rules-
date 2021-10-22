@@ -18,6 +18,7 @@ def getAverage(A,B):
     return np.mean(A+B)
 
 def preprocess(array,dim,minDif):
+    #TODO ponemos la dimension sobre la cual ordenas y el otro es el entrada al window
     avg = np.mean(getDimension(array,1)) + minDif
     sorted_arr = sortOnIndex(array,dim)
     array = [a[1] for a in sorted_arr]
