@@ -54,5 +54,13 @@ def Window(array,avg,minDif):
         current += 1
     return R
 
+def createRules(rules,array,dim):
+    sorted_arr = sortOnIndex(array,dim)
+    for r in rules:
+        if r[1]==len(array):
+            break
+        else:
+            print(sorted_arr[r[1]][0] , " ==> " , round(np.mean(r[0])))
+
     
 
