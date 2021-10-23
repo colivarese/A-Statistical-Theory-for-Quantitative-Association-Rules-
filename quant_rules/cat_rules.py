@@ -22,6 +22,5 @@ for freq in freqs[2]:
     indices = [i for i, x in enumerate(reversed_cat) if x == freq]
     tmp_sum = []
     for idx in indices:
-        tmp_sum.append(dataset[idx][3])
-    #print(freq, "==>", np.mean(tmp_sum))
-print(freqs[1])
+        tmp_sum.append(dataset[idx][3]) #SOLO AGREGA LA SIGUIENTE DIMENSION CAMBIAR A QUE AGREGE TODAS LAS NUMERICAS
+    print(freq, "==>", np.mean(tmp_sum))
