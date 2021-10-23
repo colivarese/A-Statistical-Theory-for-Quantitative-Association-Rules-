@@ -87,7 +87,9 @@ def getCategoricalHeaeders(dataset):
     categorical_headers = [key for key in dict(dataset.dtypes) if dict(dataset.dtypes)[key] in ['object']]
     categorical_headers = list(combinations(categorical_headers))
     return [header for header in categorical_headers if len(header) > 0]
-    return list(itertools.combinations(categorical_headers, 2))
+
+def getQuantHeaders(dataset):
+    return [key for key in dict(dataset.dtypes) if dict(dataset.dtypes)[key] in ['int16', 'int32', 'int64', 'float16', 'float32', 'float64']]
 
 def combinations(items):
     return ( set(itertools.compress(items,mask)) for mask in itertools.product(*[[0,1]]*len(items)) )
