@@ -69,6 +69,9 @@ def createRules(rules,array,dim):
 
 # --- CATEGORICAL-----
 
-def extractCategorical(dataset):
-    return dataset.select_dtypes(['object'])
+def extractCategorical(dataset, asArray):
+    if asArray:
+        return dataset.select_dtypes(['object']).to_numpy()
+    else:
+        return dataset.select_dtypes(['object'])
 
