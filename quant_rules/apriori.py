@@ -69,7 +69,6 @@ def aprioriFromFile(fname, minSup, minConf):
 
     return list(globalFreqItemSet.values()), rules
 
-
 if __name__ == "__main__":
     optparser = OptionParser()
     optparser.add_option('-f', '--inputFile',

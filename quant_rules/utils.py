@@ -75,3 +75,9 @@ def extractCategorical(dataset, asArray):
     else:
         return dataset.select_dtypes(['object'])
 
+def extractNumerical(dataset, asArray):
+    if asArray:
+        return dataset.select_dtypes(['int64']).to_numpy()
+    else:
+        return dataset.select_dtypes(['int64'])
+

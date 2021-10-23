@@ -2,6 +2,7 @@ from csv import reader
 from collections import defaultdict
 from itertools import chain, combinations
 
+
 def dataToCSV(fname):
     first = True
     currentID = 1
@@ -38,6 +39,8 @@ def getFromFile(fname):
                 itemSet.add(frozenset([item]))
             itemSets.append(record)
     return itemSet, itemSets
+
+
 
 
 def getAboveMinSup(itemSet, itemSetList, minSup, globalItemSetWithSup):
