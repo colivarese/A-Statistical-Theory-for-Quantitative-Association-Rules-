@@ -4,9 +4,12 @@ from scipy import stats
 from statsmodels.stats import weightstats as stests
 
 
-def readFile(file):
+def readFile(file, asArray):
     df = pd.read_csv(file)
-    return df.to_numpy()
+    if asArray:
+        return df.to_numpy()
+    else:
+        return df
 
 def sortOnIndex(array, dim):
     return sorted(array, key=lambda a: a[dim])
@@ -63,4 +66,9 @@ def createRules(rules,array,dim):
             print(sorted_arr[r[1]][0] , " ==> " , round(np.mean(r[0])))
 
     
+
+# --- CATEGORICAL-----
+
+def extractCategorical(dataset):
+    return dataset.select_dtypes(['object'])
 
