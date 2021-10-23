@@ -3,9 +3,12 @@ from utils import *
 from apriori import *
 from utilsApriori import *
 import os
-dataset = readFile('./dataset/categorical_two.csv', asArray=False)
+import itertools
+dataset = readFile('./dataset/categorical.csv', asArray=False)
 
+categoricalHead = getCategoricalHeaeders(dataset)
 
+tmp = dataset[categoricalHead[0]]
 cat_dataset = extractCategorical(dataset,asArray=True)
 reversed_cat = [set(i) for i in cat_dataset]
 pd.DataFrame(reversed_cat).to_csv('./dataset/categorical_only.csv')

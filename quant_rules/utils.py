@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from scipy import stats
 from statsmodels.stats import weightstats as stests
+import itertools
 
 
 def readFile(file, asArray):
@@ -10,6 +11,7 @@ def readFile(file, asArray):
         return df.to_numpy()
     else:
         return df
+
 
 def sortOnIndex(array, dim):
     return sorted(array, key=lambda a: a[dim])
@@ -81,3 +83,12 @@ def extractNumerical(dataset, asArray):
     else:
         return dataset.select_dtypes(['int64'])
 
+def getCategoricalHeaeders(dataset):
+    categorical_headers = [key for key in dict(dataset.dtypes) if dict(dataset.dtypes)[key] in ['object']]
+    categorical_headers = list(combinations(categorical_headers))
+    return [header for header in categorical_headers if len(header) > 0]
+    return list(itertools.combinations(categorical_headers, 2))
+
+def combinations(items):
+    return ( set(itertools.compress(items,mask)) for mask in itertools.product(*[[0,1]]*len(items)) )
+    # alternative:  
