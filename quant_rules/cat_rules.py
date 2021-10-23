@@ -2,6 +2,7 @@ import numpy as np
 from utils import *
 from apriori import *
 from utilsApriori import *
+import os
 dataset = readFile('./dataset/categorical.csv', asArray=False)
 
 
@@ -23,5 +24,6 @@ for freq in freqs[2]:
     indices = [i for i, x in enumerate(reversed_cat) if x == freq]
     tmp_sum = []
     for idx in indices:
-        tmp_sum.append(quant_dataset[idx]) #SOLO AGREGA LA SIGUIENTE DIMENSION CAMBIAR A QUE AGREGE TODAS LAS NUMERICAS
+        tmp_sum.append(quant_dataset[idx]) 
     print(freq, "==>", np.mean(tmp_sum,axis=0))
+os.remove('./dataset/categorical_only.csv')
