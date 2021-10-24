@@ -11,7 +11,10 @@ def getQuantRules(dataFile, minDif_in):
     print(cols[0], " ==> ",cols[1])
     createRules(rules,dataset,0) 
 
-getQuantRules('./dataset/hours_gad.csv',5)
+
+#Guardar en la carpeta de dataset tus datos
+#Para el cuantitativo SOLO debe haber columnas numericas
+getQuantRules(dataFile='./dataset/hours_gad.csv',minDif_in=5)
 
 
 
