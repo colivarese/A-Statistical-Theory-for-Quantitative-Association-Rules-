@@ -60,12 +60,17 @@ def Window(array,avg,minDif):
     return R
 
 def createRules(rules,array,dim):
+    prev = None
     sorted_arr = sortOnIndex(array,dim)
     for r in rules:
         if r[1]==len(array):
             break
         else:
-            print(sorted_arr[r[1]][0] , " ==> " , round(np.mean(r[0])))
+            if prev is None:
+                print("[ None, ",sorted_arr[r[1]][0],"]", " ==> " , round(np.mean(r[0])))
+            else:
+                print("[",sorted_arr[prev][0], "," ,sorted_arr[r[1]][0], "] ==> " , round(np.mean(r[0])))
+        prev = r[1]
 
     
 
