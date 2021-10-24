@@ -37,4 +37,6 @@ def getCatQuantRules(dataFile, support):
         print(" ============== \n \n")
 
 
+#Guardar en la carpeta de dataset tus datos
+#Para el cuantitativo puede haber columnas numericas y categoricas
 getCatQuantRules(dataFile='./dataset/categorical_two.csv',support=400)
