@@ -18,7 +18,9 @@ To get Categorical => Quantitatve Rules
 There is no Hash-Tree implementation, this results in slower times.
 
 Quantitative Performance
+
 ![Quant Performance](https://user-images.githubusercontent.com/80273045/138647541-eefdded6-991c-4f55-a128-0ee6307d9e15.png)
 
 Categorical Performance 
+
 ![Categorical performance](https://user-images.githubusercontent.com/80273045/138647560-a1b90530-a827-4d24-b769-b9a77eaf20f6.png)
