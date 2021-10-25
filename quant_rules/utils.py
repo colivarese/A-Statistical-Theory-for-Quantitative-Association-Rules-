@@ -4,11 +4,6 @@ from scipy import stats
 from statsmodels.stats import weightstats as stests
 import itertools
 
-def readFileCols_quant(file, cols):
-    df = pd.read_csv(file)
-    df = df[cols]
-    return df.to_numpy()
-
 def readFile(file, asArray):
     df = pd.read_csv(file)
     if asArray:
