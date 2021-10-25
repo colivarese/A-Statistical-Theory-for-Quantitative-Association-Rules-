@@ -4,6 +4,8 @@ from utils import *
 def getQuantRules(dataFile, minDif_in):
     dataset = readFile(dataFile,asArray=True)
 
+    #dataset = readFileCols_quant(dataFile,cols)
+
     data_to_work, avg, minDif = preprocess(dataset,0,minDif_in)
     rules = Window(data_to_work, avg, minDif)
 
