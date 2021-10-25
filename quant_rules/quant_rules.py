@@ -34,12 +34,9 @@ def getQuantPerformance(dataFile, low_minDif, high_minDif, step_minDif):
 
 #Guardar en la carpeta de dataset tus datos
 #Para el cuantitativo SOLO debe haber columnas numericas
-#getQuantRules(dataFile='./dataset/hours_gad.csv',minDif_in=3)
+getQuantRules(dataFile='./dataset/hours_gad.csv',minDif_in=3)
 
-
-#getQuantPerformance(dataFile='./dataset/hours_gad.csv',low_minDif=1, high_minDif=6, step_minDif=1)
-
-getQuantPerformance(dataFile='./dataset/hours_gad.csv', low_minDif=1, high_minDif=6, step_minDif=1)
+#getQuantPerformance(dataFile='./dataset/hours_gad.csv', low_minDif=1, high_minDif=6, step_minDif=1)
 
 
 
