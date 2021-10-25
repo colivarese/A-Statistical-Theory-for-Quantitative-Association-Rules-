@@ -3,6 +3,8 @@ import numpy as np
 from scipy import stats
 from statsmodels.stats import weightstats as stests
 import itertools
+import time
+import matplotlib.pyplot as plt
 
 def readFile(file, asArray):
     df = pd.read_csv(file)
