@@ -58,7 +58,7 @@ def getCatPerformance(dataFile, lowSupport, highSupport, stepSupport):
 
 
 
-#getCatPerformance(dataFile='./dataset/categorical_two.csv',lowSupport= 100,highSupport=1000,stepSupport=100)
+#getCatPerformance(dataFile='./dataset/categorical_two.csv',lowSupport= 100,highSupport=500,stepSupport=100)
 
 # Guardar en la carpeta de dataset tus datos
 # Para el cuantitativo puede haber columnas numericas y categoricas
