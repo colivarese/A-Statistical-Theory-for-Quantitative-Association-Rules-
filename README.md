@@ -17,4 +17,9 @@ To get Categorical => Quantitatve Rules
 
 There is no Hash-Tree implementation, this results in slower times.
 
+Quantitative Performance
+
+![alt text](https://github.com/[colivarese]/[A-Statistical-Theory-for-Quantitative-Association-Rules-]/blob/[main]/Categorical Performance.png?raw=true)
+
+
 
